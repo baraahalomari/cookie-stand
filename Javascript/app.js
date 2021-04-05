@@ -6,6 +6,8 @@ function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+
+
 let seattle = {
     min: 23,
     max: 65,
@@ -249,10 +251,10 @@ let Lima = {
             liElement.textContent = `${hoursLocation[i]}  ${Lima.cookies[i]} Cookies`
         }
 
-        let totalli=document.createElement(`li`);
-        ulElement.appendChild(totalli);
-        totalli.textContent=`Total: ${this.total} cookies`
-        
+let totalli=document.createElement(`li`);
+ulElement.appendChild(totalli);
+totalli.textContent=`Total: ${this.total} cookies`
+
 
         parent.appendChild(articleElement);
     }
