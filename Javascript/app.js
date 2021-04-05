@@ -1,6 +1,6 @@
 `use strict`;
 
-let hoursLocation = [`          `,`6am :`, `7am :`, `8am :`, `9am :`, `10am :`, `11am :`, `12pm :`, `1pm :`, `2pm :`, `3pm :`, `4pm :`, `5pm :`, `6pm :`, `7pm :` , `Total`];
+let hoursLocation = [`          `, `6am :`, `7am :`, `8am :`, `9am :`, `10am :`, `11am :`, `12pm :`, `1pm :`, `2pm :`, `3pm :`, `4pm :`, `5pm :`, `6pm :`, `7pm :`, `Total`];
 
 let parent = document.getElementById(`parent`);
 let table = document.createElement(`table`);
@@ -13,57 +13,34 @@ for (let i = 0; i < hoursLocation.length; i++) {
     thElement.textContent = hoursLocation[i];
 }
 let locations = [`Seattle`, `Tokyo`, `Dubai`, `Paris`, `Lima`, `Totals`]
-/*
-for (let j = 0; j < locations.length; j++) {
-    let locationRow=document.createElement(`tr`);
-    table.appendChild(locationRow);
-    let nameData=document.createElement(`nameData`);
-    nameData.textContent=locations[j];
-}
-*/
+
 
 function LocationShop(nameLoc, min, max, avg) {
-this.nameLoc=nameLoc;
-this.total = 0;
-this.max=max;
-this.min=min;
-this.avg=avg;
-this.avgCust=[];
-this.cookies=[];
+    this.nameLoc = nameLoc;
+    this.total = 0;
+    this.max = max;
+    this.min = min;
+    this.avg = avg;
+    this.avgCust = [];
+    this.cookies = [];
 
 }
-
-    
-
-
-
 
 LocationShop.prototype.randerRow = function () {
 
-   /* for (let j = 0; j < locations.length; j++) {
-        let locationRow = document.createElement(`tr`);
-        table.appendChild(locationRow);
-        let locData = document.createElement(`td`);
-        locationRow.appendChild(locData);
-        locData.textContent = locations[j];
-    
-    }*/
-        let dataRow = document.createElement(`tr`);
-        table.appendChild(dataRow);
-        let tdElement=document.createElement(`td`);
+    let dataRow = document.createElement(`tr`);
+    table.appendChild(dataRow);
+    let tdElement = document.createElement(`td`);
+    dataRow.appendChild(tdElement);
+    tdElement.textContent = this.nameLoc;
+    for (let i = 0; i < hoursLocation.length; i++) {
+
+        let tdElement = document.createElement(`td`);
         dataRow.appendChild(tdElement);
-        tdElement.textContent=this.nameLoc;
-        for (let i = 0; i < hoursLocation.length; i++) {
-          //  let locationRow = document.createElement(`tr`);
-         //   table.appendChild(locationRow);
-         let tdElement = document.createElement(`td`);
-         dataRow.appendChild(tdElement);
-           //let coockiData = document.createElement(`td`);
-           // coockiData.appendChild(coockiData);
-            tdElement.textContent = this.cookies[i];
-        }
-    
-} 
+        tdElement.textContent = this.cookies[i];
+    }
+
+}
 
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -71,32 +48,32 @@ function randomNumber(min, max) {
 LocationShop.prototype.getAvg = function () {
     for (let a = 0; a < hoursLocation.length; a++) {
         this.avgCust.push(Math.floor(randomNumber(this.min, this.max)));
-        this.total += this.cookies[a];
+        
     }
 
     for (let j = 0; j < hoursLocation.length; j++) {
-        this.cookies.push(Math.floor(randomNumber(this.min, this.max)* this.avg) );
-
+        this.cookies.push(Math.floor(randomNumber(this.min, this.max) * this.avg));
+        this.total += this.cookies[a];
     }
 }
 
 
 
-let seattle = new LocationShop(`seattle`,23,65,6.3);
+let seattle = new LocationShop(`seattle`, 23, 65, 6.3);
 seattle.getAvg();
 seattle.randerRow();
 
 console.log(seattle.cookies);
-let tokyo = new LocationShop(`Tokyo`, 3,24,1.2);
+let tokyo = new LocationShop(`Tokyo`, 3, 24, 1.2);
 tokyo.getAvg();
 tokyo.randerRow();
-let dubai = new LocationShop(`Dubai`, 11,38,3.7);
+let dubai = new LocationShop(`Dubai`, 11, 38, 3.7);
 dubai.getAvg();
 dubai.randerRow();
-let paris = new LocationShop(`Paris`, 20,38,2.3);
+let paris = new LocationShop(`Paris`, 20, 38, 2.3);
 paris.getAvg();
 paris.randerRow();
-let lima =  new LocationShop(`Lima`,2,16,4.6);
+let lima = new LocationShop(`Lima`, 2, 16, 4.6);
 lima.getAvg();
 lima.randerRow();
 
