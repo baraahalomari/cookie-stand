@@ -32,10 +32,9 @@ function randomNumber(min, max) {
 
 
 
-
-
-
-
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 
 
 function LocationShop(nameLoc, min, max, avg) {
@@ -78,6 +77,7 @@ LocationShop.prototype.getAvg = function () {
         this.total += this.cookies[a];
     }
 }
+
 function forFooter() {
     let footrtER=document.createElement(`tr`);
     table.appendChild(footrtER);
@@ -90,6 +90,7 @@ function forFooter() {
     for (let i = 0; i < hoursLocation.length; i++) {
         totalForHour=0;
         for (let j = 0; j < locations.length; j++) {
+
             totalForHour+=locations[j].cookies[i];
             totalTotal+=locations[j].cookies[i];
         }
@@ -98,11 +99,13 @@ function forFooter() {
       //  let finalRow=document.createElement(`tr`);
        finalTh.textContent=totalForHour;
        // finalTh.textContent=totalForHour;
+
      }    
    
     let totalsth =document.createElement(`th`);
     footrtER.appendChild(totalsth);
     totalsth.textContent=totalTotal;
+
 
 
 }
@@ -127,6 +130,7 @@ let lima = new LocationShop(`Lima`, 2, 16, 4.6);
 lima.getAvg();
 lima.randerRow();
 forFooter();
+
 console.log(locations);
 
 let cookieStand= document.getElementById(`cookiestand`);
@@ -151,6 +155,7 @@ function submitter(event) {
          locations[i].getAvg();
         locations[i].randerRow();
        
+
     }
 }
 submitter();
@@ -158,6 +163,6 @@ for (let i = 0; i < locations.length; i++) {
   locations[i].getAvg();
     locations[i].randerRow();
       
-}
+};
 
 
