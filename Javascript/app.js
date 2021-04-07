@@ -149,20 +149,23 @@ function submitter(event) {
     console.log(avgCust);
    let addedLocation=new LocationShop(nameLoc, min, max, avg);
     console.log(addedLocation);
-    let container=document.getElementById(`cookiestand`);
-    container.textContent=' ';
+    let parent=document.getElementById(`cookiestand`);
+    parent.textContent='';
     for (let i = 0; i < locations.length; i++) {
+
          locations[i].getAvg();
         locations[i].randerRow();
        
 
     }
 }
+
+
 submitter();
 for (let i = 0; i < locations.length; i++) {
   locations[i].getAvg();
     locations[i].randerRow();
       
-};
+}
 
 
