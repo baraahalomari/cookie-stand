@@ -2,6 +2,7 @@ table,th,td{
     border: solid brown 1px;
     border-collapse: collapse;
 }
+
 *{
     box-sizing: border-box;
 }
