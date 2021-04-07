@@ -76,7 +76,7 @@ paris.randerRow();
 let lima = new LocationShop(`Lima`, 2, 16, 4.6);
 lima.getAvg();
 lima.randerRow();
-
+document.write(`hello`);
 /*
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
