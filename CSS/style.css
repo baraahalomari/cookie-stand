@@ -54,6 +54,10 @@ h3{
     position: absolute;
     left: 1100px;
 }
+#fourth{
+    position: absolute;
+    left: 700px;
+}
 h1{
     font-size: 100px;
     font-weight: bold;
