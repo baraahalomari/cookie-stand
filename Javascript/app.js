@@ -114,22 +114,22 @@ forHeader();
 
 let seattle = new LocationShop(`seattle`, 23, 65, 6.3);
 seattle.getAvg();
-seattle.randerRow();
+//seattle.randerRow();
 
 console.log(seattle.cookies);
 let tokyo = new LocationShop(`Tokyo`, 3, 24, 1.2);
 tokyo.getAvg();
-tokyo.randerRow();
+//tokyo.randerRow();
 let dubai = new LocationShop(`Dubai`, 11, 38, 3.7);
 dubai.getAvg();
-dubai.randerRow();
+//dubai.randerRow();
 let paris = new LocationShop(`Paris`, 20, 38, 2.3);
 paris.getAvg();
-paris.randerRow();
+//paris.randerRow();
 let lima = new LocationShop(`Lima`, 2, 16, 4.6);
 lima.getAvg();
-lima.randerRow();
-forFooter();
+//lima.randerRow();
+//forFooter();
 
 console.log(locations);
 
@@ -149,23 +149,26 @@ function submitter(event) {
     console.log(avgCust);
    let addedLocation=new LocationShop(nameLoc, min, max, avg);
     console.log(addedLocation);
-    let parent=document.getElementById(`cookiestand`);
-    parent.textContent='';
-    for (let i = 0; i < locations.length; i++) {
+ 
+   addedLocation.getAvg();
+  table.textContent='';
+ forHeader();
+ 
+
+ for (let i = 0; i < locations.length; i++) {
 
          locations[i].getAvg();
         locations[i].randerRow();
-       
-
+        
     }
+ 
+    forFooter();
 }
 
 
-submitter();
 for (let i = 0; i < locations.length; i++) {
   locations[i].getAvg();
     locations[i].randerRow();
-      
+     
 }
-
 
