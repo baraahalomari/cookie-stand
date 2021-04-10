@@ -79,11 +79,11 @@ LocationShop.prototype.getAvg = function () {
 }
 
 function forFooter() {
-    let footrtER=document.createElement(`tr`);
-    table.appendChild(footrtER);
-    let totalth=document.createElement(`th`);
-    footrtER.appendChild(totalth);
-    totalth.textContent=`Totals`;
+    let footerTr=document.createElement(`tr`);
+    table.appendChild(footerTr);
+    let totalTd=document.createElement(`td`);
+    footerTr.appendChild(totalTd);
+    totalTd.textContent=`Totals`;
 
     let totalForHour;
     let totalTotal=0;
@@ -94,17 +94,17 @@ function forFooter() {
             totalForHour+=locations[j].cookies[i];
             totalTotal+=locations[j].cookies[i];
         }
-        let finalTh =document.createElement(`th`);
-        footrtER.appendChild(finalTh);
+        let finalTd =document.createElement(`td`);
+        footerTr.appendChild(finalTd);
       //  let finalRow=document.createElement(`tr`);
-       finalTh.textContent=totalForHour;
+       finalTd.textContent=totalForHour;
        // finalTh.textContent=totalForHour;
 
      }    
    
-    let totalsth =document.createElement(`th`);
-    footrtER.appendChild(totalsth);
-    totalsth.textContent=totalTotal;
+    let totalsTd =document.createElement(`td`);
+    footerTr.appendChild(totalsTd);
+    totalsTd.textContent=totalTotal;
 
 
 
@@ -129,7 +129,7 @@ paris.getAvg();
 let lima = new LocationShop(`Lima`, 2, 16, 4.6);
 lima.getAvg();
 //lima.randerRow();
-//forFooter();
+
 
 console.log(locations);
 
@@ -171,4 +171,4 @@ for (let i = 0; i < locations.length; i++) {
     locations[i].randerRow();
      
 }
-
+forFooter();
