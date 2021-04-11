@@ -1,6 +1,9 @@
 table,th,td{
     border: solid brown 1px;
     border-collapse: collapse;
+    padding: 9px;
+    font-weight: bold;
+    text-align: center;
 }
 
 *{
@@ -189,4 +192,36 @@ footer{
     top: 2200px;
     height: 300px;
     width: 500px;
+}
+
+table{
+    margin: 20px;
+    margin-left: 150px;
+}
+fieldset{
+    text-align: center;
+    margin: 15px;
+    background-image: url("../IMG/salmon.png");
+    background-repeat: no-repeat;
+    background-position-y:top;
+    background-size: 1100px;
+}
+#headerimg{
+    position: relative;
+    margin-left: 470px;
+    bottom: 155px;
+    height: 140px;
+}
+label{
+    font-weight: bold;
+    color:  #ff8000;
+    margin: 15px;
+}
+
+
+#submit{
+    background-color: rgb(192, 87, 11);
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
 }

@@ -13,30 +13,31 @@
 
     <header>
         <h2>Cookie Stand</h1>
+            <img id="headerimg" src="IMG/chinook.jpg" >
     </header>
     <Main>
     <div id="cookieStand"></div>
 
         <div id="container"></div>
-        <form action="" id="cookiestand">
+        <form name="forForm" action="" id="cookiestand" onsubmit="return validatiForm()">
             <fieldset>
-                <label for="locationFaild">Location</label>
+                <label for="locationFaild">Location</label> <br>
                 <input type="text" id="locationFaild" name="locationFaild">
                 <br>
                 <br>
-                <label for="minCust">Minimum Custumers</label>
+                <label for="minCust">Minimum Custumers</label> <br>
                 <input type="number" id="minCust" name="minCust">
                 <br>
                 <br>
-                <label for="maxCust">Maximum Custumers</label>
+                <label for="maxCust">Maximum Custumers</label> <br>
                 <input type="number" id="maxCust" name="maxCust">
                 <br>
                 <br>
-                <label for="avgCust">Averge Custumers</label>
+                <label for="avgCust">Averge Custumers</label> <br>
                 <input type="number" id="avgCust" name="avgCust">
                 <br>
                 <br>
-                <input type="submit">
+                <input id="submit" type="submit">
             </fieldset>
         </form>
 
