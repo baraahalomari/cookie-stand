@@ -107,8 +107,6 @@ function forFooter() {
     footrtER.appendChild(totalsth);
     totalsth.textContent=totalTotal;
 
-
-
 }
 forHeader();
 
