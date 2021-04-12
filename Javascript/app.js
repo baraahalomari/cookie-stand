@@ -82,11 +82,12 @@ LocationShop.prototype.randerRow = function () {
 }
 
 
-function forFooter() {
-    let footrtER=document.createElement(`tr`);
-    table.appendChild(footrtER);
+
+    let footerTr=document.createElement(`tr`);
+    table.appendChild(footerTr);
     let totalTd=document.createElement(`td`);
-    footrtER.appendChild(totalTd);
+    footerTr.appendChild(totalTd);
+
     totalTd.textContent=`Totals`;
 
     let totalForHour;
@@ -99,13 +100,16 @@ function forFooter() {
             totalTotal+=locations[j].cookies[i];
         }
         let finalTd =document.createElement(`td`);
-        footrtER.appendChild(finalTd);
+
+        footerTr.appendChild(finalTd);
        finalTd.textContent=totalForHour;
+   
+
      }    
    
-    let totalsth =document.createElement(`th`);
-    footrtER.appendChild(totalsth);
-    totalsth.textContent=totalTotal;
+    let totalsTd =document.createElement(`td`);
+    footerTr.appendChild(totalsTd);
+    totalsTd.textContent=totalTotal;
 
 }
 forHeader();
@@ -174,6 +178,7 @@ for (let i = 0; i < locations.length; i++) {
     locations[i].randerRow();
      
 }
+
 
 forFooter();
 
