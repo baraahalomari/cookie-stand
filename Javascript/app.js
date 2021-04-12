@@ -131,15 +131,6 @@ lima.getAvg();
 
 console.log(locations);
 
-function validatiForm(){
-    var x = document.forms["forForm"]["locationFaild"].value;
-    if (x==""){
-        alert("please, filled the location");
-        return false;
-    }
-}
-
-
 
 
 
