@@ -32,9 +32,7 @@ function randomNumber(min, max) {
 
 
 
-function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-}
+
 
 let locations = [];
 function LocationShop(nameLoc, min, max, avg) {
@@ -112,20 +110,20 @@ forHeader();
 
 
 let seattle = new LocationShop(`seattle`, 23, 65, 6.3);
-seattle.getAvg();
+//seattle.getAvg();
 
 console.log(seattle.cookies);
 let tokyo = new LocationShop(`Tokyo`, 3, 24, 1.2);
-tokyo.getAvg();
+//tokyo.getAvg();
 
 let dubai = new LocationShop(`Dubai`, 11, 38, 3.7);
-dubai.getAvg();
+//dubai.getAvg();
 
 let paris = new LocationShop(`Paris`, 20, 38, 2.3);
-paris.getAvg();
+//paris.getAvg();
 
 let lima = new LocationShop(`Lima`, 2, 16, 4.6);
-lima.getAvg();
+//lima.getAvg();
 
 
 
@@ -147,11 +145,11 @@ function submitter(event) {
     console.log(event);
     let nameLoc=event.target.locationFaild.value;
     console.log(nameLoc);
-    let min =event.target.minCust.value;
+    let min =parseInt(event.target.minCust.value);
     console.log(min);
-    let max = event.target.maxCust.value;
+    let max = parseInt(event.target.maxCust.value);
     console.log(max);
-    let avg = event.target.avgCust.value;
+    let avg =parseFloat(event.target.avgCust.value);
     console.log(avgCust);
    let addedLocation=new LocationShop(nameLoc, min, max, avg);
     console.log(addedLocation);
@@ -180,5 +178,5 @@ for (let i = 0; i < locations.length; i++) {
 
 forFooter();
 
-validatiForm();
+
 
