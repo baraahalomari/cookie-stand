@@ -30,6 +30,13 @@ function randomNumber(min, max) {
 }
 
 
+
+
+
+
+
+
+
 let locations = [];
 function LocationShop(nameLoc, min, max, avg) {
     this.nameLoc = nameLoc;
@@ -106,6 +113,22 @@ forHeader();
 
 
 let seattle = new LocationShop(`seattle`, 23, 65, 6.3);
+
+//seattle.getAvg();
+
+console.log(seattle.cookies);
+let tokyo = new LocationShop(`Tokyo`, 3, 24, 1.2);
+//tokyo.getAvg();
+
+let dubai = new LocationShop(`Dubai`, 11, 38, 3.7);
+//dubai.getAvg();
+
+let paris = new LocationShop(`Paris`, 20, 38, 2.3);
+//paris.getAvg();
+
+let lima = new LocationShop(`Lima`, 2, 16, 4.6);
+//lima.getAvg();
+
 // seattle.getAvg();
 
 console.log(seattle.cookies);
@@ -125,13 +148,7 @@ let lima = new LocationShop(`Lima`, 2, 16, 4.6);
 
 console.log(locations);
 
-function validatiForm(){
-    var x = document.forms["forForm"]["locationFaild"].value;
-    if (x==""){
-        alert("please, filled the location");
-        return false;
-    }
-}
+
 
 
 
@@ -147,11 +164,13 @@ function submitter(event) {
     console.log(event);
     let nameLoc= event.target.locationFaild.value;
     console.log(nameLoc);
-    let min = parseInt(event.target.minCust.value);
+
+    let min =parseInt(event.target.minCust.value);
     console.log(min);
     let max = parseInt(event.target.maxCust.value);
     console.log(max);
-    let avg = parseFloat(event.target.avgCust.value);
+    let avg =parseFloat(event.target.avgCust.value);
+
     console.log(avgCust);
    let addedLocation=new LocationShop(nameLoc, min, max, avg);
     console.log(addedLocation);
@@ -180,5 +199,5 @@ for (let i = 0; i < locations.length; i++) {
 
 forFooter();
 
-validatiForm();
+
 

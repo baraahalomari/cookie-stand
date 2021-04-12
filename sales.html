@@ -19,14 +19,14 @@
     <div id="cookieStand"></div>
 
         <div id="container"></div>
-        <form name="forForm" action="" id="cookiestand" onsubmit="return validatiForm()">
+        <form name="forForm" action="" id="cookiestand" >
             <fieldset>
                 <label for="locationFaild">Location</label> <br>
-                <input type="text" id="locationFaild" name="locationFaild">
+                <input type="text" id="locationFaild" name="locationFaild" required>
                 <br>
                 <br>
                 <label for="minCust">Minimum Custumers</label> <br>
-                <input type="number" id="minCust" name="minCust">
+                <input type="number" id="minCust" name="minCust" >
                 <br>
                 <br>
                 <label for="maxCust">Maximum Custumers</label> <br>
@@ -37,7 +37,7 @@
                 <input type="number" id="avgCust" name="avgCust" step="any">
                 <br>
                 <br>
-                <input id="submit" type="submit">
+                <input id="submit" type="submit" required>
             </fieldset>
         </form>
 
