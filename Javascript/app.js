@@ -82,12 +82,11 @@ LocationShop.prototype.randerRow = function () {
 }
 
 
-
-    let footerTr=document.createElement(`tr`);
-    table.appendChild(footerTr);
+function forFooter() {
+    let footrtER=document.createElement(`tr`);
+    table.appendChild(footrtER);
     let totalTd=document.createElement(`td`);
-    footerTr.appendChild(totalTd);
-
+    footrtER.appendChild(totalTd);
     totalTd.textContent=`Totals`;
 
     let totalForHour;
@@ -100,16 +99,13 @@ LocationShop.prototype.randerRow = function () {
             totalTotal+=locations[j].cookies[i];
         }
         let finalTd =document.createElement(`td`);
-
-        footerTr.appendChild(finalTd);
+        footrtER.appendChild(finalTd);
        finalTd.textContent=totalForHour;
-   
-
      }    
    
-    let totalsTd =document.createElement(`td`);
-    footerTr.appendChild(totalsTd);
-    totalsTd.textContent=totalTotal;
+    let totalsth =document.createElement(`th`);
+    footrtER.appendChild(totalsth);
+    totalsth.textContent=totalTotal;
 
 }
 forHeader();
@@ -134,6 +130,9 @@ lima.getAvg();
 
 
 console.log(locations);
+
+
+
 
 
 
@@ -178,7 +177,6 @@ for (let i = 0; i < locations.length; i++) {
     locations[i].randerRow();
      
 }
-
 
 forFooter();
 
